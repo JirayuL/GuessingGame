@@ -13,8 +13,8 @@ public class GameConsole {
 	 * The play method plays a game using input from a user.
 	 * 
 	 * @param game
-	 *            receive uppperBound number
-	 * @return secret number
+	 *            receive uppperBound number.
+	 * @return secret number.
 	 */
 	public int play(GuessingGame game) {
 		Scanner input = new Scanner(System.in);
@@ -36,7 +36,7 @@ public class GameConsole {
 		return game.getSecret();
 	}
 
-	/** create object and start the game */
+	/** create object and start the game. */
 	public static void main(String[] args) {
 		GuessingGame game = new GuessingGame(10);
 		GameConsole ui = new GameConsole();

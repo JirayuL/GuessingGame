@@ -28,9 +28,9 @@ public class GuessingGame {
 	 * Initialize a new game.
 	 * 
 	 * @param uppperBound
-	 *            is the max value for the secret number (>1)
+	 *            is the max value for the secret number (>1).
 	 */
-	public GuessingGame(int uppperBound) { // this is a constructor
+	public GuessingGame(int uppperBound) { // This is a constructor.
 		this.uppperBound = uppperBound;
 		this.secret = getRandomNumber(10);
 		this.hint = "I'm thinking of a number between 1 and " + uppperBound;
@@ -38,11 +38,11 @@ public class GuessingGame {
 	}
 
 	/**
-	 * Check the number with the secret
+	 * Check the number with the secret.
 	 * 
 	 * @param number
-	 *            receive from user
-	 * @return Is answer correct based on recent answer from user
+	 *            receive from user.
+	 * @return Is answer correct based on recent answer from user.
 	 */
 	public boolean guess(int number) {
 		this.guesses++;
@@ -62,7 +62,7 @@ public class GuessingGame {
 	 * Set hint based on the most recent guess.
 	 * 
 	 * @param hint
-	 *            based on most recent guess
+	 *            based on most recent guess.
 	 */
 	public void setHint(String hint) {
 		this.hint = hint;
@@ -71,7 +71,7 @@ public class GuessingGame {
 	/**
 	 * Return a hint based on the most recent guess.
 	 * 
-	 * @return hint based on most recent guess
+	 * @return hint based on most recent guess.
 	 */
 	public String getHint() {
 		return hint;
@@ -81,8 +81,8 @@ public class GuessingGame {
 	 * Create a random number between 1 and limit.
 	 * 
 	 * @param limit
-	 *            is the upper limit for random number
-	 * @return a random number between 1 and limit (inclusive)
+	 *            is the upper limit for random number.
+	 * @return a random number between 1 and limit (inclusive).
 	 */
 	private int getRandomNumber(int limit) {
 		long seed = System.currentTimeMillis();
@@ -91,9 +91,9 @@ public class GuessingGame {
 	}
 
 	/**
-	 * Return a correct answer
+	 * Return a correct answer.
 	 * 
-	 * @return secret to show the correct answer
+	 * @return secret to show the correct answer.
 	 */
 	public int getSecret() {
 		return secret;
