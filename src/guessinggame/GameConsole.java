@@ -19,12 +19,12 @@ public class GameConsole {
 	public int play(GuessingGame game) {
 		Scanner input = new Scanner(System.in);
 		String title = "Guessing Game";
-		String promp = "Your guess?";
+		String prompt = "Your guess?";
 		int number;
 		System.out.println(title);
 		System.out.println(game.getHint());
 		while (true) {
-			System.out.println(promp);
+			System.out.println(prompt);
 			number = Integer.parseInt(input.nextLine());
 			if (game.guess(number)) {
 				System.out.println(game.getHint());
