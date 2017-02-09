@@ -17,7 +17,7 @@
 
 ## GuessingGame.java
 * getGuess()
-  * Return guesses
+  * Return guesses.
 * GuessingGame()
   * Set initial value of attribute.
 * guess()
