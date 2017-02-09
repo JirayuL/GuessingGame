@@ -15,7 +15,7 @@
   * Create new GameConsole.
   * Play the game.
 
-## GuessingGame
+## GuessingGame.java
 * getGuess()
   * Return guesses
 * GuessingGame()
