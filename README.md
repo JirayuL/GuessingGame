@@ -31,5 +31,5 @@
 * getRandomNumber()
   * Random number and keep it in rand.
   * Return random number.
-* getSecret
+* getSecret()
   * Return Secret.
