@@ -33,6 +33,7 @@ public class GameConsole {
 			System.out.println(game.getHint());
 		}
 		System.out.println("You used " + game.getGuess() + " guesses.");
+		input.close();
 		return game.getSecret();
 	}
 

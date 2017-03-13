@@ -10,10 +10,30 @@ import java.util.Random;
  */
 
 public class GuessingGame {
-	private int uppperBound;
+	private int upperBound;
+
 	private int secret;
 	private String hint;
 	private int guesses;
+
+	/**
+	 * Initialize a new game.
+	 * 
+	 * @param uppperBound
+	 *            is the max value for the secret number (>1).
+	 */
+	public GuessingGame(int upperBound) { // This is a constructor.
+		newGame(upperBound);
+	}
+
+	/**
+	 * Return upperBound.
+	 * 
+	 * @return Return upperBound.
+	 */
+	public int getUppperBound() {
+		return upperBound;
+	}
 
 	/**
 	 * Return guesses to tell user
@@ -25,16 +45,13 @@ public class GuessingGame {
 	}
 
 	/**
-	 * Initialize a new game.
+	 * Set the difficult of the guessing game.
 	 * 
 	 * @param uppperBound
-	 *            is the max value for the secret number (>1).
+	 *            of the guessing game.
 	 */
-	public GuessingGame(int uppperBound) { // This is a constructor.
-		this.uppperBound = uppperBound;
-		this.secret = getRandomNumber(10);
-		this.hint = "I'm thinking of a number between 1 and " + uppperBound;
-		this.guesses = 0;
+	public void setUpperBound(int uppperBound) {
+		this.upperBound = uppperBound;
 	}
 
 	/**
@@ -49,13 +66,13 @@ public class GuessingGame {
 		if (number > this.secret) {
 			setHint("Sorry, your guess is too large");
 			return false;
-		} else if (number < this.secret) {
+		}
+		if (number < this.secret) {
 			setHint("Sorry, your guess is too small");
 			return false;
-		} else {
-			setHint("Correct. The secret is " + this.secret);
-			return true;
 		}
+		setHint("Correct. The secret is " + this.secret);
+		return true;
 	}
 
 	/**
@@ -78,6 +95,16 @@ public class GuessingGame {
 	}
 
 	/**
+	 * Set the guesses of GuessingGame.
+	 * 
+	 * @param Set
+	 *            the value of guesses.
+	 */
+	public void setGuesses(int guesses) {
+		this.guesses = guesses;
+	}
+
+	/**
 	 * Create a random number between 1 and limit.
 	 * 
 	 * @param limit
@@ -97,5 +124,12 @@ public class GuessingGame {
 	 */
 	public int getSecret() {
 		return secret;
+	}
+
+	public void newGame(int upperBound) {
+		this.upperBound = upperBound;
+		this.secret = getRandomNumber(upperBound);
+		this.hint = "I'm thinking of a number between 1 and " + this.upperBound;
+		this.guesses = 0;
 	}
 }
